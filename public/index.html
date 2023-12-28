@@ -1,0 +1,79 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+    ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/register" method="post" onsubmit="return validateRegistration()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="dob">DOB:</label>
+            <input type="TEXT" id="dob" name="dob" required>
+
+
+            <label for="ADDRESS">ADDRESS:</label>
+            <input type="text" id="ADDRESS" name="ADDRESS" required>
+
+            <label for="state">Select State:</label>
+            <select id="state" name="state">
+                <option value="AL">UTTAR PRADESH</option>
+                <option value="AK">UTTRAKHAND</option>
+                <option value="AZ">RAJASTHAN</option>
+                <option value="AR">WEST BENGAL</option>
+                <option value="GB">TAMIL NADU</option>
+                <option value="FR">KERELA</option>
+                <option value="DE">TELEGANA</option>
+                <option value="AH">ASSAM</option>
+                <option value="QY">TRIPURA</option>
+                <option value="RT">MAHARASTRA</option>
+                <option value="KJ">HIMACHAL PRADESH</option>
+                <option value="KJ">JAMU KASHMIR</option>
+                <option value="HD">ARUNACHAL PRADESH</option>
+                <option vakue="KJ">GUJJRAT</option>
+                <option value="KS">BIHAR</option>
+                <option value="ud">delhi</option>
+                <option value="LD">CHATTISGHAR</option>
+                <option Value="OD">JAHARKHAND</option>
+                <option value="BN">LADAK</option>
+                <option value="DF">ANDRA PRADESH </option>
+                <option value="KD">KARNATAKA</option>
+            </select>
+
+            <button type="submit" sclass="btn btn-outline-success" onclick="registerUser()">Register</button>
+        </form>
+    </div>
+        <script>
+     function registerUser(){
+            // For simplicity, let's assume registration is successful
+            const registrationSuccess = true;
+
+            if (registrationSuccess) {
+                // Display a prompt after successful registration
+                const userInput = prompt('Registration successful! Enter something:');
+                alert(`You entered: ${userInput}`);
+            } else {
+                alert('Registration failed. Please try again.');
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">    </script>
+</body>
+
+</html>
